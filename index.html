@@ -4,25 +4,29 @@
 <head>
     <title>Johan - Kernel Developer</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
         body {
             font-family: Arial;
-            max-width: 800px;
+            max-width: 80vw;
             margin: 50px auto;
             display: flex;
             flex-direction: column;
-            background-color: #dfe2dcc2;
+            background-color: #f3fbebc2;
             color: black;
             font-size: medium;
-            font-family: "Ubuntu", sans-serif;
-            font-weight: 400;
+            font-family: "EB Garamond", serif;
+            /* font-family:"Dancing Script", cursive; */
+            font-weight: 500;
             font-style: normal;
             font-size: larger;
             border: solid rgba(0, 0, 0, 0.151);
-            padding: 10px 100px;
+            padding: 10px 80px;
+
 
 
 
@@ -33,7 +37,7 @@
         .headings {
             color: #333;
             font-weight: 600;
-            font-size: 23px;
+            font-size: 29px;
             /* font-style: italic; */
             display: flex;
             align-items: center;
@@ -178,14 +182,31 @@
             align-items: center;
             text-align: justify;
         }
-       
+
+        .contents .content-list {
+            list-style: none;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
     <div class="introduction">
 
-        <div class="headings">My First steps towards open source</div>
+        <div class="headings">My first steps towards open source</div>
+
+        <div class="contents">
+            <h3>Contents</h3>
+            <ul class="content-list">
+                <li><a href="#item1">Changing old Apis</a></li>
+                <li><a href="#item2">Syzbot</a></li>
+                <li><a href="#item3">Staging driver</a></li>
+                <li><a href="#item4">Tools and scripts</a></li>
+                <li><a href="#item5">Reflections on my mentors</a> </li>
+                <li><a href="#item6">Summary</a></li>
+            </ul>
+
+        </div>
 
         <p class="introp">I have been tinkering with Linux operating system since I bought my first laptop ever since
             then I have been
@@ -213,7 +234,7 @@
         <div class="p1">
             <p>My first patch was in the USB subsystem because I had prior knowledge in this subsystem I thought it is
                 the
-                perfect place to begin with . I knew there was a “FIXME” statement in the transport.c file 
+                perfect place to begin with . I knew there was a “FIXME” statement in the transport.c file
             </p>
             <img src="/Pictures/usb.png" alt="" class="p1img">
             <p>stating that It needed some protocol translation so with some prior knowledge i had I began to make a
@@ -239,7 +260,7 @@
         </div>
 
         <div class="p2">
-            <h3>Changing Old apis</h3>
+            <h3 id="item1">Changing Old apis</h3>
             <p>With the rejection of first patch I quickly began searching of new ways to find bugs in hope for fixing
                 them and submitting a patch and during this groping I came across this <a
                     href="kernelnewbies.org/KernelJanitors/Todo">website</a> which had many
@@ -269,7 +290,7 @@
 
         <div class="p3">
 
-            <h3>Syzbot</h3>
+            <h3 id="item2" >Syzbot</h3>
             <p>Fixing apis changes were not hard .It did not required much care and work so the urge was there to do
                 something more difficult .One of the best websites that lists bugs to Linux kernel was <a
                     href="https://syzbot.org/upstream">Syzbot</a> .It always have a open section which
@@ -300,7 +321,7 @@
         </div>
 
         <div class="p4">
-            <h3>Staging Drivers</h3>
+            <h3 id="item3" >Staging Drivers</h3>
 
             <p> <code class="code">/drivers/staging</code> subsystem is such good place for beginners I wish I knew it
                 earlier. driver/staging area
@@ -324,7 +345,7 @@
 
 
         <div class="p5">
-            <h3>Tools and scripts </h3>
+            <h3 id="item4" >Tools and scripts </h3>
 
             <p>Besides <a href="https://syzbot.org/upstream">Syzbot</a> and <code class="code">/driver/staging</code>
                 subsystem I also utilized many static analysis tools including
@@ -353,7 +374,7 @@
 
         <div class="p6">
 
-            <h3>Reflections on my mentors</h3>
+            <h3 id="item5">Reflections on my mentors</h3>
 
             <p>Although I have not attended much meetings but those meetings which I attended where incredibly
                 productive
@@ -370,7 +391,7 @@
         </div>
 
         <div class="p7">
-            <h2>Summary</h2>
+            <h2 id="item6">Summary</h2>
             <p>At last this mentorship has been very helpful to me since I was new to open source not only it helped me
                 submitting patches to Linux but also helped in many other ways as well . I submitted at least six
                 patches to Linux during this program and many are under review. Since I learned submitting patches
