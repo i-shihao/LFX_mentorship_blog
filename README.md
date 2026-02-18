@@ -1,5 +1,19 @@
 
-LFX Kernel Mentorship Journey Blog
+#LFX Kernel Mentorship Journey Blog
+
+## Table of Content
+
+ -[Introduction](#introduction)
+ -[Patch Submission Journey](#patch-submission-journey)
+ -[Changing Old APIs](#changing-old-apis)
+ -[Syzbot](#syzbot)
+ -[Staging Driver](#staging-driver)
+ -[Tool and Scripts](#tool-and-script)
+ -[Reflection on My Mento](#reflection-on-my-mentor)
+ -[Summary](#summary)
+
+
+##  Introduction
 
 I have been tinkering with Linux operating system since I bought my first
 laptop ever since then I have been spending consistent time initially trying
@@ -14,7 +28,7 @@ difficult task among them were getting five or ten accepted patches to
 Linux kernel. I later realized that submitting patches to Linux kernel was
 little hard and had to be done early in the program to complete the graduation .
 
-Patch submission Journey
+## Patch Submission Journey
 
 My first patch was in the USB subsystem because I had prior knowledge in this
 subsystem I thought it is the perfect place to begin with. I knew there was a
@@ -38,7 +52,7 @@ how to submit a good patch . I also learned how to submit a good patch by readin
 documentations in the Linux tree under /Documentation/process which were good
 help in regard to patch submission.
 
-Chanding old Apis
+## Chanding old APIs
 
 With the rejection of first patch I quickly began searching of new ways to find
 bugs in hope for fixing them and submitting a patch and during this groping I
@@ -61,7 +75,7 @@ functions that used snprintf() with sysfs_emit() and submitted a patch and
 fortunately it got accpeted but one thing i needed to remember that only in the
 new implementation sysfs_emit() was asked to replace not in the old showfs
 
-Syzbot
+## Syzbot
 
 Fixing apis changes were not hard .It did not required much care and work so the
 urge was there to do something more difficult .One of the best websites that
@@ -88,7 +102,7 @@ time on syzbot since it needs careful observation .If I stayed I would not be
 able to make even five patches so I needed to make a choice here . Below is
 picture of syzbot interface.
 
-staging drivers
+## Staging Drivers
 
 /drivers/staging subsystem is such good place for beginners I wish I knew it
 earlier. driver/staging area is a place where there is a lot of need for fixes
@@ -102,7 +116,7 @@ I was short on time I also eventually left this directory for later exploration
 however this was such a good place to begin with since it is where most fixes
 are needed.
 
-Tools and scripts
+## Tools and Scripts
 
 Besides syzbot and /drivers/staging subsystem I also utilized many static
 analysis tools including Coccinelle, smatch and checkpatch.pl, to find
@@ -112,17 +126,13 @@ and smatch were bugs but rather a false positive and most of the bugs
 found by them required significant investigation .Checkpatch.pl was more
 straight forward in terms of finding coding style and compliance issues.
 Here are some commands I used mostly during the mentorship
+```
+ make coccicheck MODE=report M=drive
+ smatch -p=kernel --file-output drivers/usb/core/*.c
+ find . -name "*.c" -exec  ~/linux-source/linux-git/scripts/checkpatch.pl --strict -f {} \;
+```
 
-      make coccicheck MODE=report M=drive
-      r
-     smatch -p=kernel --file-output drivers/usb/core/*.c
-
-     find . -name "*.c" -exec \
-
-      ~/linux-source/linux-git/scripts/checkpatch.pl --strict -f {} \;
-
-
-Refelection on my Mentors
+## Reflection on my Mentors
 
 Although I have not attended much meetings but those meetings which I attended
 where incredibly productive helpful and enjoying as well . One of the most
@@ -138,7 +148,7 @@ used to answer our questions with good details .It was amazing to see both of
 them working it was such that both of them emphasized on every minute detail
 and left nothing undone . They did their job beautifully.
 
-Summary
+## Summary
 
 At last this mentorship has been very helpful to me since I was new to open source
 not only it helped me submitting patches to Linux but also taught me some valuable
