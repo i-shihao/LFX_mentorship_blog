@@ -31,7 +31,9 @@ little hard and had to be done early in the program to complete the graduation .
 My first patch was in the USB subsystem because I had prior knowledge in this
 subsystem I thought it is the perfect place to begin with. I knew there was a
 “FIXME” statement in the transport.c
+
 ![usb.png](Pictures/usb.png)
+
 file stating that It needed some protocol
 translation so with some prior knowledge I had I began to make a proper protocol
 translation for it and submitted a patch to its specific maintainers among them
@@ -56,12 +58,13 @@ help in regard to patch submission.
 
 With the rejection of first patch I quickly began searching of new ways to find
 bugs in hope for fixing them and submitting a patch and during this groping I
-came across this website which had many “TODO” lists to do and one of them was
-API changes . There were many old functions that need to be replaced with newer
-functions and I began to replace old deprecated APIs with new APIs and send
-patches to each subsystem maintainers and without much resend this time several
-patches were accepted and with this my first patch got accepted into the Linux
-Kernel .Although it was minute changes but eventually got accepted by maintainers.
+came across this [website](https://kernelnewbies.org/KernelJanitors/Todo) which
+had many “TODO” lists to do and one of them was API changes . There were many 
+old functions that need to be replaced with newer functions and I began to rep
+-lace old deprecated APIs with new APIs and send patches to each subsystem
+maintainers and without much resend this time several patches were accepted and
+with this my first patch got accepted into the Linux Kernel .Although it was
+minute changes but eventually got accepted by maintainers.
 
 The website's wiki has not been updated since 2017 so the bugs listed there were
 already been fixed or no new api changes were listed on it so I needed to move on
@@ -80,7 +83,11 @@ new implementation sysfs_emit() was asked to replace not in the old showfs
 Fixing apis changes were not hard .It did not required much care and work so the
 urge was there to do something more difficult .One of the best websites that
 lists bugs to Linux kernel was Syzbot .It always have a open section which lists
-bugs that are found in the Linux subsystem and most of them needs fixing .It is
+bugs that are found in the Linux subsystem and most of them needs fixing.It is
+
+![syzbot](Pictures/syzbot.png)
+
+
 usually good to begin with beginner friendly bugs like “KASAN” bugs which are
 easy in terms of understanding kernel bugs which are usually hard .These type
 of bugs might have its reproducers with them but it depends .Most of the open
@@ -107,10 +114,16 @@ picture of syzbot interface.
 /drivers/staging subsystem is such good place for beginners I wish I knew it
 earlier. driver/staging area is a place where there is a lot of need for fixes
 improvements and changes .When I heard about it I quickly went to explore it
-and as expected there were many directories listed there .In most of the
+and as expected there were many directories listed there.In most of the
+
+[staging-drivers](Pictures/staging.png)
+
 directories there were “TODO” files. These files were indicating that the
 driver needed fixes and improvements and in hope of someone do it they were
 listed there and they were good for beginners to get their hands dirty.
+
+[TODO](Pictures/TODO.png)
+
 I explored many directories there and saw many to do lists however because
 I was short on time I also eventually left this directory for later exploration
 however this was such a good place to begin with since it is where most fixes
