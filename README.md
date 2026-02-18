@@ -1,16 +1,14 @@
-
-#LFX Kernel Mentorship Journey Blog
+# LFX Kernel Mentorship Journey Blog
 
 ## Table of Content
-
- -[Introduction](#introduction)
- -[Patch Submission Journey](#patch-submission-journey)
- -[Changing Old APIs](#changing-old-apis)
- -[Syzbot](#syzbot)
- -[Staging Driver](#staging-driver)
- -[Tool and Scripts](#tool-and-script)
- -[Reflection on My Mento](#reflection-on-my-mentor)
- -[Summary](#summary)
+ - [Introduction](#introduction)
+ - [Patch Submission Journey](#patch-submission-journey)
+ - [Changing Old APIs](#changing-old-apis)
+ - [Syzbot](#syzbot)
+ - [Staging Driver](#staging-driver)
+ - [Tool and Scripts](#tool-and-script)
+ - [Reflection on My Mento](#reflection-on-my-mentor)
+ - [Summary](#summary)
 
 
 ##  Introduction
@@ -159,5 +157,5 @@ the future as well because it is such and amazing ecosystem to work with . I am
 grateful for this mentorship that such good mentors have taught us and guided us
 on the way towards open source . Thanks to Shuah khan and David hunter .
 
-This file is hosted on Github pages and can be visited using this link
-            https://i-shihao.github.io/shihao/
+###This file is hosted on Github pages and can be visited using this link
+    [(Github)] (https://i-shihao.github.io/shihao/)
