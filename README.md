@@ -31,7 +31,7 @@ little hard and had to be done early in the program to complete the graduation .
 My first patch was in the USB subsystem because I had prior knowledge in this
 subsystem I thought it is the perfect place to begin with. I knew there was a
 “FIXME” statement in the transport.c
-![usb.png](Picturs/usb.png)
+![usb.png](Pictures/usb.png)
 file stating that It needed some protocol
 translation so with some prior knowledge I had I began to make a proper protocol
 translation for it and submitted a patch to its specific maintainers among them
