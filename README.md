@@ -116,13 +116,13 @@ earlier. driver/staging area is a place where there is a lot of need for fixes
 improvements and changes .When I heard about it I quickly went to explore it
 and as expected there were many directories listed there.In most of the
 
-[staging-drivers](Pictures/staging.png)
+![staging-drivers](Pictures/staging.png)
 
 directories there were “TODO” files. These files were indicating that the
 driver needed fixes and improvements and in hope of someone do it they were
 listed there and they were good for beginners to get their hands dirty.
 
-[TODO](Pictures/TODO.png)
+![TODO](Pictures/TODO.png)
 
 I explored many directories there and saw many to do lists however because
 I was short on time I also eventually left this directory for later exploration
@@ -173,4 +173,4 @@ grateful for this mentorship that such good mentors have taught us and guided us
 on the way towards open source . Thanks to Shuah khan and David hunter .
 
 ## This file is hosted on Github pages and can be visited using this link
-    [(Github)] (https://i-shihao.github.io/LFX_mentorship_blog/)
+    [Github](https://i-shihao.github.io/LFX_mentorship_blog/)
